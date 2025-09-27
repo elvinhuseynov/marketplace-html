@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const productContainer = document.getElementById("product-container");
   const cartContainer = document.getElementById("cart-items-container");
 
-  const localProducts = JSON.parse(localStorage.getItem("cart"));
+  const localProducts = JSON.parse(localStorage.getItem("cart")) ?? [];
   let total = 0;
   if (productContainer) {
     cartCount.textContent = localProducts.length;
